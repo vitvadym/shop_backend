@@ -1,11 +1,6 @@
 import { Request, Response } from 'express';
 import ProductService from '../services/product.service';
-
-enum Category {
-  PHONES = 'phones',
-  TABLETS = 'tablets',
-  ACCESSORIES = 'accessories',
-}
+import { Category } from '../types';
 
 const getAllProducts = async (req: Request, res: Response) => {
   try {

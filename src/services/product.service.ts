@@ -27,7 +27,12 @@ class ProductService {
   }
 
   async getProductsByParams({ query, category, namespaceId, itemId }: Args) {
-    const { limit = 12, order = 'desc', page = 1, sort = 'year' } = query;
+    const {
+      limit = 12,
+      order = 'desc',
+      page = 1,
+      sort = 'year',
+    } = query as QueryParams;
 
     return await Product.find({
       category: {
@@ -70,10 +75,6 @@ class ProductService {
       },
     });
   }
-
-  // async getProductsByCategory(category: string) {
-  //   return await Product.find({ category });
-  // }
 }
 
 export default new ProductService();

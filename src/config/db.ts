@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import * as dotenv from 'dotenv';
+import dotenv from 'dotenv';
 
 dotenv.config();
 const { DB_NAME, DB_USER, DB_PASS } = process.env;
